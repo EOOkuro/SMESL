@@ -470,3 +470,52 @@ table.ltable-plain td, table.ltable-plain tbody th { text-align: left; }
 /* late additions */
 .week, .score-week { break-inside: avoid; }
 .rl-teams { font-weight: 500; }
+
+
+
+/*-- alert --*/
+
+.alert-banger {
+  background-color: #d90429;
+  color: #ffffff;
+  padding: 24px 16px;
+  text-align: center;
+  border-bottom: 4px solid #8d0801;
+}
+
+.alert-banger-in {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.alert-badge {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.alert-banger h2 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin: 8px 0;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.alert-banger p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.alert-sub {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
