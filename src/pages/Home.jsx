@@ -19,21 +19,6 @@ export default function Home() {
 
   return (
     <>
-      {/* 🚨 WEATHER CANCELLATION BANGER */}
-      <section className="alert-banger">
-        <div className="alert-banger-in">
-          <span className="alert-badge">🚨 WEATHER ALERT</span>
-          <h2>ALL GAMES CANCELLED — SATURDAY, SEPT 20</h2>
-          <p>
-            Due to severe weather and unsafe field conditions at {SEASON.venue}, 
-            <strong> all matches across all divisions are officially cancelled</strong> for Saturday, September 20.
-          </p>
-          <p className="alert-sub">
-            The safety of our players and families comes first. Stay safe and dry! Updates on make-up dates will be shared soon.
-          </p>
-        </div>
-      </section>
-
       <section className="hero">
         <div className="hero-in">
           <p className="hero-kicker">{SEASON.label}</p>

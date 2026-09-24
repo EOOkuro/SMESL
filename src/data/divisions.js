@@ -12,14 +12,14 @@ export const DIVISIONS = [
     navLabel: "Pre-K & K",
     // Scores stay off the board for this age group — flip to true to publish a table.
     standings: false,
-    slots: ["9:00 AM", "9:30 AM"],
+    slots: ["9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM"],
     tag: "3v3",
     description: "No hands, no goalies — kick-ins restart play after every goal.",
-    teams: ["St. Benedict 1", "St. Benedict 2", "St. Ailbe 1", "St. Ailbe 2"],
+    teams: ["St. Ailbe 1", "St. Ailbe 2", "St. Benedict 1", "St. Benedict 2", "St. Ethelreda 1", "St. Ethelreda 2", "St. Thomas", "Cambridge Classical Academy"],
     quickfacts: [
       { label: "Format", value: "4 quarters, 6 minutes each" },
       { label: "Officiating", value: "1 referee per field" },
-      { label: "Kickoff times", value: "9:00 AM & 9:30 AM" },
+      { label: "Kickoff times", value: "9:00, 9:30, 10:00 & 10:30 AM — one field, four games each week" },
       { label: "Location", value: "Tuley Park, 501 E 90th Pl" },
     ],
     goodToKnow: [...GOOD_TO_KNOW_STANDARD, "Games proceed in light rain; check email game-day mornings for weather cancellations."],
@@ -31,15 +31,15 @@ export const DIVISIONS = [
     label: "1st – 4th Grade",
     navLabel: "1st – 4th",
     standings: true,
-    slots: ["9:00 AM", "9:45 AM", "10:30 AM"],
-    tag: "7 teams",
-    description: "Regular season weeks 1–7, playoffs and loser bracket weeks 8–10.",
-    teams: ["St. Ailbe 1", "St. Ailbe 2", "St. Benedict 1", "St. Benedict 2", "St. Thomas", "St. Ethelreda", "St. Margaret"],
+    slots: ["9:00 AM", "9:45 AM", "10:30 AM", "11:15 AM"],
+    tag: "8 teams",
+    description: "Regular season weeks 1–8, playoffs weeks 9–11.",
+    teams: ["St. Ailbe 1", "St. Ailbe 2", "St. Benedict 1", "St. Benedict 2", "St. Ethelreda 1", "St. Ethelreda 2", "St. Thomas", "Cambridge Classical Academy"],
     quickfacts: [
       { label: "Format", value: "4 quarters, 8 minutes each (~32 min game time)" },
-      { label: "Kickoff times", value: "9:00, 9:45 & 10:30 AM — one field, one bye each week" },
+      { label: "Kickoff times", value: "9:00, 9:45, 10:30 & 11:15 AM — one field, four games each week, no byes" },
       { label: "Location", value: "Tuley Park, 501 E 90th Pl" },
-      { label: "Playoffs", value: "Weeks 8–10, all 7 teams seeded by standings" },
+      { label: "Playoffs", value: "Weeks 9–11, all 8 teams seeded by standings" },
     ],
     goodToKnow: [...GOOD_TO_KNOW_STANDARD, "Games proceed in light rain; check email game-day mornings for severe-weather cancellations."],
     contact: "Questions? Contact your team coach.",
@@ -100,6 +100,7 @@ export const SCHOOLS = [
   { name: "St. Ethelreda", logo: null },
   { name: "St. Margaret of Scotland", logo: null },
   { name: "Chicago Collegiate", logo: null },
+  { name: "Cambridge Classical Academy", logo: null },
 ];
 
 export const UPCOMING = [
