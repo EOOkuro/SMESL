@@ -13,6 +13,7 @@ import Rules from "./pages/Rules.jsx";
 import Guides from "./pages/Guides.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Register from "./pages/Register"
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="contact" element={<Contact />} />
           <Route path="standings" element={<Navigate to="/table" replace />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>
