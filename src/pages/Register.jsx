@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const schools = [
   { id: "stethelreda", abbr: "SE", name: "St. Ethelreda School", neighborhood: "Auburn Gresham", address: "8734 S Paulina St", url: "https://www.stethelreda.org/" },
-  { id: "cambridge", abbr: "CCA", name: "Cambridge Classical Academy", neighborhood: "Bridgeport", address: "4650 S Dearborn St", url: "https://www.cambridgeclassicalacademy.com/" },
+  { id: "cambridge", abbr: "CCA", name: "Cambridge Classical Academy", neighborhood: "Bronzeville", address: "4650 S Dearborn St", url: "https://www.cambridgeclassicalacademy.com/" },
   { id: "stbenedict", abbr: "ASBA", name: "Academy of St. Benedict the African", neighborhood: "West Englewood", address: "6020 S Laflin St", url: "https://www.academystbenedict.org/" },
   { id: "stthomas", abbr: "STA", name: "St. Thomas the Apostle School", neighborhood: "Hyde Park", address: "5467 S Woodlawn Ave", url: "https://www.stthomashydepark.org/" },
   { id: "stailbe", abbr: "SAC", name: "St. Ailbe Catholic School", neighborhood: "Calumet Heights", address: "9037 S Harper Ave", url: "https://www.stailbeschool.org/" },
