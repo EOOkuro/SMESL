@@ -3,7 +3,7 @@
 //
 //   stage:  "regular" counts toward the league table. "playoff" does not.
 //           "festival" is a non-competitive Skills Festival day (PreK only) — not a game, no score.
-//   tbd:    true when the opponents depend on seeding or a prior result,
+//   tbd:    true when the  opponents depend on seeding or a prior result,
 //           so there's nothing to enter a score against yet.
 //
 // CHANGE LOG:
