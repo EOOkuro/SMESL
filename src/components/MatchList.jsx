@@ -1,5 +1,6 @@
 import React from "react";
 import { BYES } from "../data/fixtures.js";
+import { matchStatus } from "../lib/standings.js";
 
 function niceDate(iso) {
   if (!iso) return "";
@@ -11,13 +12,35 @@ function niceDate(iso) {
   });
 }
 
+const STATUS_LABEL = {
+  upcoming: "Upcoming",
+  overdue: "Result pending",
+};
+
 function Fixture({ match, score }) {
-  const decided = Array.isArray(score);
+  const status = matchStatus(match, score);
+
+  if (status === "tbd") {
+    return (
+      <li className="fixture is-tbd">
+        <span className="fx-time">{match.time}</span>
+        <span className="fx-teams">
+          <span className="fx-label">
+            {match.gameTag ? `${match.gameTag}: ` : ""}
+            {match.label || `${match.home ?? "TBD"} v ${match.away ?? "TBD"}`}
+          </span>
+        </span>
+        <span className="fx-status fx-status-tbd">Opponents set by results</span>
+      </li>
+    );
+  }
+
+  const decided = status === "played";
   const homeWin = decided && score[0] > score[1];
   const awayWin = decided && score[1] > score[0];
 
   return (
-    <li className={`fixture ${decided ? "is-played" : ""}`}>
+    <li className={`fixture is-${status}`}>
       <span className="fx-time">{match.time}</span>
       <span className="fx-teams">
         {match.label ? (
@@ -33,6 +56,9 @@ function Fixture({ match, score }) {
         )}
       </span>
       {match.gameTag && <span className="fx-tag">{match.gameTag}</span>}
+      {!decided && (
+        <span className={`fx-status fx-status-${status}`}>{STATUS_LABEL[status]}</span>
+      )}
     </li>
   );
 }
