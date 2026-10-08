@@ -10,7 +10,7 @@ export const RESULTS = {
   // 1st–4th
   "early-w1-1": [0, 6],   // Benedict A 0–6 Ailbe A
   "early-w1-2": [1, 4],   // Benedict B 1–4 Ailbe B
-  "early-w2-1": [8, 0],   // Thomas 8–0 Benedict A
+  "early-w2-1": [6, 0],   // Thomas 8–0 Benedict A
   "early-w2-2": [3, 0],   // Benedict A 3–0 Ailbe A (makeup doubleheader)
   "early-w3-2": [1, 8],   // Ailbe A 1–8 Thomas
   "early-w3-3": [3, 2],   // Ailbe B 3–2 Ethelreda A
