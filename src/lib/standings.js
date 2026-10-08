@@ -21,6 +21,37 @@ export function weeksFor(divisionKey, stage) {
   return weeks;
 }
 
+/**
+ * Status of a single fixture, relative to today:
+ *   "played"   — score recorded
+ *   "tbd"      — opponents not yet set (depends on seeding/a prior result)
+ *   "upcoming" — dated today or later, no score yet
+ *   "overdue"  — date already passed, no score entered yet
+ */
+export function matchStatus(match, score, today = new Date()) {
+  if (Array.isArray(score)) return "played";
+  if (match.tbd || !match.home || !match.away) return "tbd";
+  if (!match.date) return "upcoming";
+  const [y, m, d] = match.date.split("-").map(Number);
+  const matchDate = new Date(y, m - 1, d);
+  const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  return matchDate.getTime() >= startOfToday.getTime() ? "upcoming" : "overdue";
+}
+
+/** The next unplayed, dated, non-TBD fixture for a division (or null). */
+export function nextFixture(divisionKey, results, today = new Date()) {
+  const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const upcoming = fixturesFor(divisionKey)
+    .filter((f) => f.home && f.away && !f.tbd && !Array.isArray(results[f.id]))
+    .filter((f) => {
+      if (!f.date) return true;
+      const [y, m, d] = f.date.split("-").map(Number);
+      return new Date(y, m - 1, d).getTime() >= startOfToday.getTime();
+    })
+    .sort((a, b) => (a.date || "").localeCompare(b.date || "") || a.week - b.week);
+  return upcoming[0] || null;
+}
+
 function blankRow(team) {
   return {
     team,
