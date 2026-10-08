@@ -3,7 +3,7 @@
 //
 //   stage:  "regular" counts toward the league table. "playoff" does not.
 //           "festival" is a non-competitive Skills Festival day (PreK only) — not a game, no score.
-//   tbd:    true when the  opponents depend on seeding or a prior result,
+//   tbd:    true when the opponents depend on seeding or a prior result,
 //           so there's nothing to enter a score against yet.
 //
 // CHANGE LOG:
@@ -85,7 +85,7 @@ export const FIXTURES = [
   {"id":"early-w4-2","division":"early","week":4,"date":"2026-10-03","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Benedict A","away":"St. Ethelreda B","label":null,"tbd":false},
 
   // Week 5 — Oct 10 (4 games; Benedict B and Ethelreda B double up to catch up)
-  {"id":"early-w5-1","division":"early","week":5,"date":"2026-10-10","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ailbe A","label":null,"tbd":false},
+  {"id":"early-w5-1","division":"early","week":5,"date":"2026-10-10","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Ailbe B","label":null,"tbd":false},
   {"id":"early-w5-2","division":"early","week":5,"date":"2026-10-10","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda B","away":"St. Thomas","label":null,"tbd":false},
   {"id":"early-w5-3","division":"early","week":5,"date":"2026-10-10","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict A","away":"St. Ethelreda A","label":null,"tbd":false},
   {"id":"early-w5-4","division":"early","week":5,"date":"2026-10-10","time":"11:15 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ethelreda B","label":null,"tbd":false},
@@ -102,7 +102,7 @@ export const FIXTURES = [
 
   // Week 8 — Oct 31 (Ethelreda A doubles up)
   {"id":"early-w8-1","division":"early","week":8,"date":"2026-10-31","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ethelreda A","label":null,"tbd":false},
-  {"id":"early-w8-2","division":"early","week":8,"date":"2026-10-31","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Ailbe B","label":null,"tbd":false},
+  {"id":"early-w8-2","division":"early","week":8,"date":"2026-10-31","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ailbe A","label":null,"tbd":false},
   {"id":"early-w8-3","division":"early","week":8,"date":"2026-10-31","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda A","away":"St. Ethelreda B","label":null,"tbd":false},
 
   {"id":"early-w9-1","division":"early","week":9,"date":"2026-11-07","time":"9:00 AM","stage":"playoff","gameTag":"G1","home":"#1","away":"#4","label":null,"tbd":true},
