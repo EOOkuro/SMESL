@@ -1,12 +1,19 @@
 import React from "react";
-import { buildTable, progress } from "../lib/standings.js";
+import { buildTable, progress, nextFixture } from "../lib/standings.js";
 
 const FORM_WORD = { W: "Won", D: "Drew", L: "Lost" };
+
+function niceDate(iso) {
+  if (!iso) return "";
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
 
 export default function LeagueTable({ division, results, compact = false }) {
   const table = buildTable(division, results);
   const { played, total } = progress(division.key, results);
   const anyPlayed = played > 0;
+  const next = nextFixture(division.key, results);
 
   return (
     <div className="table-block">
@@ -70,6 +77,13 @@ export default function LeagueTable({ division, results, compact = false }) {
           ? `${played} of ${total} regular season matches played. Ties broken by goal difference, then goals scored.`
           : `No scores in yet. The table fills in as results are entered — ${total} regular season matches to play.`}
       </p>
+
+      {next && (
+        <p className="table-next">
+          Next match: {next.label || `${next.home} v ${next.away}`} — {niceDate(next.date)}
+          {next.time ? `, ${next.time}` : ""}
+        </p>
+      )}
     </div>
   );
 }
