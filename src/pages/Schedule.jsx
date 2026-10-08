@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { DIVISIONS, SEASON, MATCH_DATA } from "../data/divisions.js";
 import { DIVISIONS, SEASON } from "../data/divisions.js";
 import { MATCH_DATA } from "../data/fixtures.js";
 import { useResults } from "../lib/store.js";
