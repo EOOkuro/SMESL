@@ -132,10 +132,10 @@ export default function Scores() {
     <>
       <div className="pagehead">
         <div className="pagehead-in">
-          <h1>Enter scores</h1>
+          <h1>Match Scores</h1>
           <p>
-            Type a final score and the table recalculates straight away. Scores save to this device
-            as you go — publish them when the match day is done.
+            Record final scores and update the standings table instantly. Changes save to this device
+            automatically.
           </p>
         </div>
       </div>
@@ -163,8 +163,8 @@ export default function Scores() {
               {unpublishedCount} unpublished score{unpublishedCount === 1 ? "" : "s"}
             </h2>
             <p>
-              Everyone else sees the results committed in <code>src/data/results.js</code>. Copy
-              yours in there to make them official.
+              Committed results live in <code>src/data/results.js</code>. Copy yours over
+              when you're ready to lock them in.
             </p>
           </div>
           <div className="publish-actions">
