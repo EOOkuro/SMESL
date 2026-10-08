@@ -13,10 +13,9 @@ export default function Table() {
     <>
       <div className="pagehead">
         <div className="pagehead-in">
-          <h1>League table</h1>
+          <h1>League Table</h1>
           <p>
-            Three points for a win, one for a draw. Regular season matches only — playoff and
-            placement games don't move the table.
+            Three points for a win, one for a draw. Standings update automatically with match scores.
           </p>
         </div>
       </div>
@@ -47,8 +46,7 @@ export default function Table() {
               <Link className="more" to={`/divisions/${d.slug}`}>Division page</Link>
             </div>
             <p className="empty">
-              No table for this division — the focus is skill-building, not standings. Match times
-              are on the division page.
+              No table for this division. Match times are available on the division page.
             </p>
           </section>
         ))}
