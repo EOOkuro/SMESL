@@ -26,7 +26,7 @@ const plans = [
     count: 2,
     label: "Two Players",
     price: "$150",
-    desc: "Register two players and save $25.",
+    desc: "More than 2! Ask?.",
     features: ["2 registered players", "Full season league play", "Jerseys included", "Player insurance coverage", "Save $25 vs. individual"],
     url: "https://buy.stripe.com/9B6fZgaeudvO4AC4AUgrS0a",
     featured: true,
