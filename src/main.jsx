@@ -10,6 +10,7 @@ import Schedule from "./pages/Schedule.jsx";
 import Scores from "./pages/Scores.jsx";
 import Schools from "./pages/Schools.jsx";
 import Rules from "./pages/Rules.jsx";
+import Procedures from "./pages/Procedures.jsx";
 import Guides from "./pages/Guides.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
