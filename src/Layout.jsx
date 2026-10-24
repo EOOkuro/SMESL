@@ -80,6 +80,7 @@ export default function Layout() {
               <h4>Pages</h4>
               <p><Link to="/table">League table</Link></p>
               <p><Link to="/schedule">Full schedule</Link></p>
+              <p><Link to="/procedures">Game day procedure</Link></p>
               <p><Link to="/guides">Cleat guide</Link></p>
               <p><Link to="/scores">Enter scores</Link></p>
             </div>
