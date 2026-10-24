@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { to: "/divisions", label: "Divisions" },
   { to: "/schools", label: "Schools" },
   { to: "/rules", label: "Rules" },
+    { to: "/procedures", label: "Game day" },
   { to: "/contact", label: "Contact" },
 ];
 
