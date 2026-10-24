@@ -30,6 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="scores" element={<Scores />} />
           <Route path="schools" element={<Schools />} />
           <Route path="rules" element={<Rules />} />
+          <Route path="procedures" element={<Procedures />} />
           <Route path="guides" element={<Guides />} />
           <Route path="contact" element={<Contact />} />
           <Route path="standings" element={<Navigate to="/table" replace />} />
