@@ -70,6 +70,7 @@ export default function Rules() {
           <Link className="more" to={`/divisions/${division.slug}`}>Division page</Link>
         </div>
         <p className="lede">{division.description}</p>
+        <p className="aside">How the day runs: see the <Link to="/procedures">game day procedure</Link>.</p>
 
         <dl className="facts">
           {division.quickfacts.map((f) => (
