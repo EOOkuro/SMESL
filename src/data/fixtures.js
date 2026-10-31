@@ -1,161 +1,30 @@
-// Auto-generated from the 2026 season schedule. Every match has a stable `id`
-// that score entries key off — if you edit a fixture, keep its id.
+// OFFICIAL RESULTS — this is what every visitor to the site sees.
 //
-//   stage:  "regular" counts toward the league table. "playoff" does not.
-//           "festival" is a non-competitive Skills Festival day (PreK only) — not a game, no score.
-//   tbd:    true when the opponents depend on seeding or a prior result,
-//           so there's nothing to enter a score against yet.
+// Scores typed on the /scores page are saved in that person's browser only.
+// To publish them for everyone: open /scores, press "Copy for results.js",
+// paste the copied block in below, commit, and redeploy.
 //
-// CHANGE LOG:
-//   - Week 1: unchanged, Sat 9/12.
-//   - Week 2: rescheduled to Sun 10/4 (weather) for ALL divisions, played at Kenwood Community Park.
-//   - Week 3: Sat 9/26 (played before Week 2's makeup date — "week" is a schedule slot,
-//     not strict chronological order).
-//   - PreK only: Week 4 is a Skills Festival Day (Sat 10/3).
-//   - 1st-4th (early): 7 teams — St. Ailbe A/B, St. Benedict A/B, St. Ethelreda A/B, St. Thomas.
-//     Cambridge removed. No Skills Festival. Weeks 1-8 regular season, weeks 9-10 playoffs.
-//   - 1st-4th (early) catch-up: Weeks 1-4 now hold only games that were actually played
-//     (5 never-scored games removed). Weeks 5-8 rebuilt with doubleheaders so every team
-//     finishes the regular season with exactly 6 games.
-//   - Week 5 (Oct 10) is a bye week for PreK-K and Middle only (1st-4th still plays 1 game).
-//     PreK-K season ends at Week 10 (no Week 11).
-//   - Middle (5th-8th): rebuilt for 5 teams. Weeks 1-4 hold only the 3 games actually played;
-//     Weeks 6-8 finish the round robin; Weeks 9-10 are top-4 playoffs.
+// Keys are fixture ids from fixtures.js. Values are [homeGoals, awayGoals].
+// Forfeits are recorded as 3–0 wins for the other team.
 
-export const BYES = {
-  "prek-2": "Played at Kenwood Community Park, 1330 E 50th St, Chicago, IL 60615 (weather makeup)",
-  "early-2": "Played at Kenwood Community Park, 1330 E 50th St, Chicago, IL 60615 (weather makeup)",
-  "early-9": "#7 seed has a bye",
-  "early-10": "Finals Day — Championship, 3rd Place & 5th Place",
-  "middle-2": "Played at Kenwood Community Park, 1330 E 50th St, Chicago, IL 60615 (weather makeup)"
+export const RESULTS = {
+  // 1st–4th
+  "early-w1-1": [0, 6],   // Benedict A 0–6 Ailbe A
+  "early-w1-2": [1, 4],   // Benedict B 1–4 Ailbe B
+  "early-w2-1": [6, 0],   // Thomas 6–0 Benedict A
+  "early-w2-2": [3, 0],   // Benedict A 3–0 Ailbe A (makeup doubleheader)
+  "early-w3-2": [1, 8],   // Ailbe A 1–8 Thomas
+  "early-w3-3": [3, 2],   // Ailbe B 3–2 Ethelreda A
+  "early-w4-1": [8, 0],   // Thomas 8–0 Ethelreda A
+  "early-w4-2": [0, 6],   // Benedict A 0–6 Ethelreda B
+  "early-w5-1": [12, 5],  // Thomas 12–5 Ailbe B (Oct 10)
+  "early-w7-1": [1, 2],   // Ailbe A 1–2 Ethelreda B (Oct 24)
+  "early-w7-2": [3, 0],   // Thomas 3–0 Benedict B (Benedict forfeit)
+  "early-w7-3": [0, 1],   // Ailbe B 0–1 Ethelreda B
+  "early-w7-4": [0, 3],   // Benedict A 0–3 Ethelreda A (Benedict forfeit)
+
+  // Middle (5th–8th)
+  "middle-w1-1": [3, 0],  // Benedict 3–0 Ailbe (Sep 12)
+  "middle-w4-1": [8, 3],  // Thomas 8–3 Ethelreda (Oct 3)
+  "middle-w2-1": [0, 0],  // Thomas 0–0 Benedict (Oct 4)
 };
-
-export const FIXTURES = [
-  // ── PreK ──────────────────────────────────────────────────────────────
-  {"id":"prek-w1-1","division":"prek","week":1,"date":"2026-09-12","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Ailbe 1","label":null,"tbd":false},
-  {"id":"prek-w1-2","division":"prek","week":1,"date":"2026-09-12","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ailbe 2","label":null,"tbd":false},
-  // Week 1 (9/12) predates the roster change and stays as played, above.
-  // From Week 2 on, the division has grown to 8 teams: St. Ailbe 1 & 2, St. Benedict 1 & 2,
-  // St. Ethelreda 1 & 2, St. Thomas, and Cambridge Classical Academy.
-  {"id":"prek-w2-1","division":"prek","week":2,"date":"2026-10-04","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
-  {"id":"prek-w2-2","division":"prek","week":2,"date":"2026-10-04","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 2","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"prek-w2-3","division":"prek","week":2,"date":"2026-10-04","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Ethelreda 2","label":null,"tbd":false},
-  {"id":"prek-w2-4","division":"prek","week":2,"date":"2026-10-04","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ethelreda 1","label":null,"tbd":false},
-  {"id":"prek-w3-1","division":"prek","week":3,"date":"2026-09-26","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"prek-w3-2","division":"prek","week":3,"date":"2026-09-26","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ethelreda 2","label":null,"tbd":false},
-  {"id":"prek-w3-3","division":"prek","week":3,"date":"2026-09-26","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 2","away":"St. Ethelreda 1","label":null,"tbd":false},
-  {"id":"prek-w3-4","division":"prek","week":3,"date":"2026-09-26","time":"10:30 AM","stage":"regular","gameTag":null,"home":"Cambridge Classical Academy","away":"St. Ailbe 1","label":null,"tbd":false},
-  {"id":"prek-w4-1","division":"prek","week":4,"date":"2026-10-03","time":"9:00 AM","stage":"festival","gameTag":null,"home":null,"away":null,"label":"Skills Festival Day","tbd":false},
-  {"id":"prek-w5-1","division":"prek","week":5,"date":"2026-10-10","time":"9:00 AM","stage":"festival","gameTag":null,"home":null,"away":null,"label":"Bye Week — no games","tbd":false},
-  {"id":"prek-w6-1","division":"prek","week":6,"date":"2026-10-17","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Ethelreda A","label":null,"tbd":false},
-  {"id":"prek-w6-2","division":"prek","week":6,"date":"2026-10-17","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda B","away":"St. Benedict 2","label":null,"tbd":false},
-  {"id":"prek-w6-3","division":"prek","week":6,"date":"2026-10-17","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Benedict 1","label":null,"tbd":false},
-  {"id":"prek-w6-4","division":"prek","week":6,"date":"2026-10-17","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda C","away":"St. Ailbe 2","label":null,"tbd":false},
-  {"id":"prek-w7-1","division":"prek","week":7,"date":"2026-10-24","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Benedict 2","label":null,"tbd":false},
-  {"id":"prek-w7-2","division":"prek","week":7,"date":"2026-10-24","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 1","away":"St. Benedict 1","label":null,"tbd":false},
-  {"id":"prek-w7-3","division":"prek","week":7,"date":"2026-10-24","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 2","away":"St. Ailbe 2","label":null,"tbd":false},
-  {"id":"prek-w7-4","division":"prek","week":7,"date":"2026-10-24","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"Cambridge Classical Academy","label":null,"tbd":false},
-  {"id":"prek-w8-1","division":"prek","week":8,"date":"2026-10-31","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Benedict 1","label":null,"tbd":false},
-  {"id":"prek-w8-2","division":"prek","week":8,"date":"2026-10-31","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ailbe 2","label":null,"tbd":false},
-  {"id":"prek-w8-3","division":"prek","week":8,"date":"2026-10-31","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
-  {"id":"prek-w8-4","division":"prek","week":8,"date":"2026-10-31","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 2","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"prek-w9-1","division":"prek","week":9,"date":"2026-11-07","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Ailbe 2","label":null,"tbd":false},
-  {"id":"prek-w9-2","division":"prek","week":9,"date":"2026-11-07","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
-  {"id":"prek-w9-3","division":"prek","week":9,"date":"2026-11-07","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"prek-w9-4","division":"prek","week":9,"date":"2026-11-07","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 1","away":"St. Ethelreda 2","label":null,"tbd":false},
-  {"id":"prek-w10-1","division":"prek","week":10,"date":"2026-11-14","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
-  {"id":"prek-w10-2","division":"prek","week":10,"date":"2026-11-14","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 2","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"prek-w10-3","division":"prek","week":10,"date":"2026-11-14","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Ethelreda 2","label":null,"tbd":false},
-  {"id":"prek-w10-4","division":"prek","week":10,"date":"2026-11-14","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ethelreda 1","label":null,"tbd":false},
-
-  // ── Early (1st–4th) — 7 teams, A/B naming, Cambridge removed ──────────
-  // Weeks 1–4: only games that were actually played (all have scores in results.js).
-  // Weeks 5–8: doubleheaders allowed, so every team ends the regular season on exactly 6 games.
-  {"id":"early-w1-1","division":"early","week":1,"date":"2026-09-12","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict A","away":"St. Ailbe A","label":null,"tbd":false},
-  {"id":"early-w1-2","division":"early","week":1,"date":"2026-09-12","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ailbe B","label":null,"tbd":false},
-
-  {"id":"early-w2-1","division":"early","week":2,"date":"2026-10-04","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Benedict A","label":null,"tbd":false},
-  {"id":"early-w2-2","division":"early","week":2,"date":"2026-10-04","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Benedict A","away":"St. Ailbe A","label":null,"tbd":false},
-
-  {"id":"early-w3-2","division":"early","week":3,"date":"2026-09-26","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Ailbe A","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"early-w3-3","division":"early","week":3,"date":"2026-09-26","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ailbe B","away":"St. Ethelreda A","label":null,"tbd":false},
-
-  {"id":"early-w4-1","division":"early","week":4,"date":"2026-10-03","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Ethelreda A","label":null,"tbd":false},
-  {"id":"early-w4-2","division":"early","week":4,"date":"2026-10-03","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Benedict A","away":"St. Ethelreda B","label":null,"tbd":false},
-
-  // Week 5 — Oct 10 (1 game)
-  {"id":"early-w5-1","division":"early","week":5,"date":"2026-10-10","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Ailbe B","label":null,"tbd":false},
-
-  // Week 6 — Oct 17 (Ailbe B and Benedict B double up)
-  {"id":"early-w6-1","division":"early","week":6,"date":"2026-10-17","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe B","away":"St. Benedict B","label":null,"tbd":false},
-  {"id":"early-w6-2","division":"early","week":6,"date":"2026-10-17","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Ailbe A","away":"St. Ethelreda A","label":null,"tbd":false},
-  {"id":"early-w6-3","division":"early","week":6,"date":"2026-10-17","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict A","away":"St. Ailbe B","label":null,"tbd":false},
-  {"id":"early-w6-4","division":"early","week":6,"date":"2026-10-17","time":"11:15 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ethelreda B","label":null,"tbd":false},
-
-  // Week 7 — Oct 24 (Ethelreda B doubles up)
-  {"id":"early-w7-1","division":"early","week":7,"date":"2026-10-24","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe A","away":"St. Ethelreda B","label":null,"tbd":false},
-  {"id":"early-w7-2","division":"early","week":7,"date":"2026-10-24","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Benedict B","label":null,"tbd":false},
-  {"id":"early-w7-3","division":"early","week":7,"date":"2026-10-24","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ailbe B","away":"St. Ethelreda B","label":null,"tbd":false},
-  {"id":"early-w7-4","division":"early","week":7,"date":"2026-10-24","time":"11:15 AM","stage":"regular","gameTag":null,"home":"St. Benedict A","away":"St. Ethelreda A","label":null,"tbd":false},
-
-  // Week 8 — Oct 31 (Benedict B, Ethelreda A, Ethelreda B double up)
-  {"id":"early-w8-1","division":"early","week":8,"date":"2026-10-31","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda A","away":"St. Ethelreda B","label":null,"tbd":false},
-  {"id":"early-w8-2","division":"early","week":8,"date":"2026-10-31","time":"9:45 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ailbe A","label":null,"tbd":false},
-  {"id":"early-w8-3","division":"early","week":8,"date":"2026-10-31","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda B","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"early-w8-4","division":"early","week":8,"date":"2026-10-31","time":"11:15 AM","stage":"regular","gameTag":null,"home":"St. Benedict B","away":"St. Ethelreda A","label":null,"tbd":false},
-
-  {"id":"early-w9-1","division":"early","week":9,"date":"2026-11-07","time":"9:00 AM","stage":"playoff","gameTag":"G1","home":"#1","away":"#4","label":null,"tbd":true},
-  {"id":"early-w9-2","division":"early","week":9,"date":"2026-11-07","time":"9:45 AM","stage":"playoff","gameTag":"G2","home":"#2","away":"#3","label":null,"tbd":true},
-  {"id":"early-w9-3","division":"early","week":9,"date":"2026-11-07","time":"10:30 AM","stage":"playoff","gameTag":"G3","home":"#5","away":"#6","label":null,"tbd":true},
-
-  {"id":"early-w10-1","division":"early","week":10,"date":"2026-11-14","time":"9:00 AM","stage":"playoff","gameTag":"5th Place","home":"Winner G3","away":"#7","label":null,"tbd":true},
-  {"id":"early-w10-2","division":"early","week":10,"date":"2026-11-14","time":"9:45 AM","stage":"playoff","gameTag":"3rd Place","home":"Loser G1","away":"Loser G2","label":null,"tbd":true},
-  {"id":"early-w10-3","division":"early","week":10,"date":"2026-11-14","time":"10:30 AM","stage":"playoff","gameTag":"Championship","home":"Winner G1","away":"Winner G2","label":null,"tbd":true},
-
-  // ── Middle (no Skills Festival, no renumbering — Week 2 date, Week 3 restored) ─────
-
-  // ── Middle (5th–8th) — 5 teams: St. Benedict, St. Ailbe, St. Thomas, St. Ethelreda, Chicago Collegiate ─────
-  // Weeks 1–4: only games that were actually played (scores in results.js). Week 5 is a bye.
-  // Weeks 6–8 finish a single round robin (4 games each). Weeks 9–10: top-4 playoffs.
-  {"id":"middle-w1-1","division":"middle","week":1,"date":"2026-09-12","time":"11:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict","away":"St. Ailbe","label":null,"tbd":false},
-  {"id":"middle-w2-1","division":"middle","week":2,"date":"2026-10-04","time":"11:00 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Benedict","label":null,"tbd":false},
-  {"id":"middle-w4-1","division":"middle","week":4,"date":"2026-10-03","time":"11:00 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"St. Ethelreda","label":null,"tbd":false},
-  {"id":"middle-w5-1","division":"middle","week":5,"date":"2026-10-10","time":"11:00 AM","stage":"festival","gameTag":null,"home":null,"away":null,"label":"Bye Week — no games","tbd":false},
-  {"id":"middle-w6-1","division":"middle","week":6,"date":"2026-10-17","time":"11:00 AM","stage":"regular","gameTag":null,"home":"Chicago Collegiate","away":"St. Ethelreda","label":null,"tbd":false},
-  {"id":"middle-w6-2","division":"middle","week":6,"date":"2026-10-17","time":"12:15 PM","stage":"regular","gameTag":null,"home":"St. Ailbe","away":"St. Thomas","label":null,"tbd":false},
-  {"id":"middle-w6-3","division":"middle","week":6,"date":"2026-10-17","time":"1:30 PM","stage":"regular","gameTag":null,"home":"St. Benedict","away":"Chicago Collegiate","label":null,"tbd":false},
-  {"id":"middle-w7-1","division":"middle","week":7,"date":"2026-10-24","time":"11:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict","away":"St. Ethelreda","label":null,"tbd":false},
-  {"id":"middle-w7-2","division":"middle","week":7,"date":"2026-10-24","time":"12:15 PM","stage":"regular","gameTag":null,"home":"St. Ailbe","away":"Chicago Collegiate","label":null,"tbd":false},
-  {"id":"middle-w8-1","division":"middle","week":8,"date":"2026-10-31","time":"11:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe","away":"St. Ethelreda","label":null,"tbd":false},
-  {"id":"middle-w8-2","division":"middle","week":8,"date":"2026-10-31","time":"12:15 PM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"Chicago Collegiate","label":null,"tbd":false},
-  {"id":"middle-w9-1","division":"middle","week":9,"date":"2026-11-07","time":"11:00 AM","stage":"playoff","gameTag":"G1","home":"#1","away":"#4","label":null,"tbd":true},
-  {"id":"middle-w9-2","division":"middle","week":9,"date":"2026-11-07","time":"12:15 PM","stage":"playoff","gameTag":"G2","home":"#2","away":"#3","label":null,"tbd":true},
-  {"id":"middle-w10-1","division":"middle","week":10,"date":"2026-11-14","time":"11:00 AM","stage":"playoff","gameTag":"3rd Place","home":"Loser G1","away":"Loser G2","label":null,"tbd":true},
-  {"id":"middle-w10-2","division":"middle","week":10,"date":"2026-11-14","time":"12:15 PM","stage":"playoff","gameTag":"Championship","home":"Winner G1","away":"Winner G2","label":null,"tbd":true},
-];
-
-// ── MATCH_DATA ────────────────────────────────────────────────────────────
-// Groups FIXTURES into { [divisionKey]: { regular: [week...], playoff: [week...] } }
-// for Schedule.jsx. Each week object: { week, date, bye, matches: [fixture...] }
-function groupByWeek(list, divKey) {
-  const byWeek = {};
-  for (const f of list) {
-    (byWeek[f.week] ||= {
-      week: f.week,
-      date: f.date,
-      bye: BYES[`${divKey}-${f.week}`] || null,
-      matches: [],
-    }).matches.push(f);
-  }
-  return Object.values(byWeek).sort((a, b) => a.week - b.week);
-}
-
-export const MATCH_DATA = Object.fromEntries(
-  ["prek", "early", "middle"].map((key) => {
-    const mine = FIXTURES.filter((f) => f.division === key);
-    return [key, {
-      regular: groupByWeek(mine.filter((f) => f.stage !== "playoff"), key),
-      playoff: groupByWeek(mine.filter((f) => f.stage === "playoff"), key),
-    }];
-  })
-);
