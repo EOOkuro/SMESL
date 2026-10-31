@@ -11,7 +11,7 @@
 //   - Week 2: rescheduled to Sun 10/4 (weather) for ALL divisions, played at Kenwood Community Park.
 //   - Week 3: Sat 9/26 (played before Week 2's makeup date — "week" is a schedule slot,
 //     not strict chronological order).
-//   - PreK only: Week 4 is a Skills Festival Day (Sat 10/3).
+//   - PreK only: Week 4 is a Skills Festival Day (Sat 10/3). Cambridge Classical Academy removed from PreK-K (its 6 games deleted).
 //   - 1st-4th (early): 7 teams — St. Ailbe A/B, St. Benedict A/B, St. Ethelreda A/B, St. Thomas.
 //     Cambridge removed. No Skills Festival. Weeks 1-8 regular season, weeks 9-10 playoffs.
 //   - 1st-4th (early) catch-up: Weeks 1-4 now hold only games that were actually played
@@ -37,16 +37,14 @@ export const FIXTURES = [
   {"id":"prek-w1-1","division":"prek","week":1,"date":"2026-09-12","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Ailbe 1","label":null,"tbd":false},
   {"id":"prek-w1-2","division":"prek","week":1,"date":"2026-09-12","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ailbe 2","label":null,"tbd":false},
   // Week 1 (9/12) predates the roster change and stays as played, above.
-  // From Week 2 on, the division has grown to 8 teams: St. Ailbe 1 & 2, St. Benedict 1 & 2,
-  // St. Ethelreda 1 & 2, St. Thomas, and Cambridge Classical Academy.
-  {"id":"prek-w2-1","division":"prek","week":2,"date":"2026-10-04","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
+  // From Week 2 on, the division has 7 teams: St. Ailbe 1 & 2, St. Benedict 1 & 2,
+  // St. Ethelreda 1 & 2, and St. Thomas. Cambridge Classical Academy removed.
   {"id":"prek-w2-2","division":"prek","week":2,"date":"2026-10-04","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 2","away":"St. Thomas","label":null,"tbd":false},
   {"id":"prek-w2-3","division":"prek","week":2,"date":"2026-10-04","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Ethelreda 2","label":null,"tbd":false},
   {"id":"prek-w2-4","division":"prek","week":2,"date":"2026-10-04","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ethelreda 1","label":null,"tbd":false},
   {"id":"prek-w3-1","division":"prek","week":3,"date":"2026-09-26","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Thomas","label":null,"tbd":false},
   {"id":"prek-w3-2","division":"prek","week":3,"date":"2026-09-26","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ethelreda 2","label":null,"tbd":false},
   {"id":"prek-w3-3","division":"prek","week":3,"date":"2026-09-26","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 2","away":"St. Ethelreda 1","label":null,"tbd":false},
-  {"id":"prek-w3-4","division":"prek","week":3,"date":"2026-09-26","time":"10:30 AM","stage":"regular","gameTag":null,"home":"Cambridge Classical Academy","away":"St. Ailbe 1","label":null,"tbd":false},
   {"id":"prek-w4-1","division":"prek","week":4,"date":"2026-10-03","time":"9:00 AM","stage":"festival","gameTag":null,"home":null,"away":null,"label":"Skills Festival Day","tbd":false},
   {"id":"prek-w5-1","division":"prek","week":5,"date":"2026-10-10","time":"9:00 AM","stage":"festival","gameTag":null,"home":null,"away":null,"label":"Bye Week — no games","tbd":false},
   {"id":"prek-w6-1","division":"prek","week":6,"date":"2026-10-17","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Ethelreda A","label":null,"tbd":false},
@@ -56,16 +54,12 @@ export const FIXTURES = [
   {"id":"prek-w7-1","division":"prek","week":7,"date":"2026-10-24","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Benedict 2","label":null,"tbd":false},
   {"id":"prek-w7-2","division":"prek","week":7,"date":"2026-10-24","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 1","away":"St. Benedict 1","label":null,"tbd":false},
   {"id":"prek-w7-3","division":"prek","week":7,"date":"2026-10-24","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 2","away":"St. Ailbe 2","label":null,"tbd":false},
-  {"id":"prek-w7-4","division":"prek","week":7,"date":"2026-10-24","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Thomas","away":"Cambridge Classical Academy","label":null,"tbd":false},
   {"id":"prek-w8-1","division":"prek","week":8,"date":"2026-10-31","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Benedict 1","label":null,"tbd":false},
   {"id":"prek-w8-2","division":"prek","week":8,"date":"2026-10-31","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ailbe 2","label":null,"tbd":false},
-  {"id":"prek-w8-3","division":"prek","week":8,"date":"2026-10-31","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
   {"id":"prek-w8-4","division":"prek","week":8,"date":"2026-10-31","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 2","away":"St. Thomas","label":null,"tbd":false},
   {"id":"prek-w9-1","division":"prek","week":9,"date":"2026-11-07","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"St. Ailbe 2","label":null,"tbd":false},
-  {"id":"prek-w9-2","division":"prek","week":9,"date":"2026-11-07","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
   {"id":"prek-w9-3","division":"prek","week":9,"date":"2026-11-07","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Thomas","label":null,"tbd":false},
   {"id":"prek-w9-4","division":"prek","week":9,"date":"2026-11-07","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Ethelreda 1","away":"St. Ethelreda 2","label":null,"tbd":false},
-  {"id":"prek-w10-1","division":"prek","week":10,"date":"2026-11-14","time":"9:00 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 1","away":"Cambridge Classical Academy","label":null,"tbd":false},
   {"id":"prek-w10-2","division":"prek","week":10,"date":"2026-11-14","time":"9:30 AM","stage":"regular","gameTag":null,"home":"St. Ailbe 2","away":"St. Thomas","label":null,"tbd":false},
   {"id":"prek-w10-3","division":"prek","week":10,"date":"2026-11-14","time":"10:00 AM","stage":"regular","gameTag":null,"home":"St. Benedict 1","away":"St. Ethelreda 2","label":null,"tbd":false},
   {"id":"prek-w10-4","division":"prek","week":10,"date":"2026-11-14","time":"10:30 AM","stage":"regular","gameTag":null,"home":"St. Benedict 2","away":"St. Ethelreda 1","label":null,"tbd":false},
