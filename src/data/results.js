@@ -23,6 +23,12 @@ export const RESULTS = {
   "early-w7-3": [0, 1],   // Ailbe B 0–1 Ethelreda B
   "early-w7-4": [0, 3],   // Benedict A 0–3 Ethelreda A (Benedict forfeit)
 
+  // Week 8 (Oct 31) — 1st–4th
+  "early-w8-3": [0, 3],   // St. Ethelreda B 0–3 St. Thomas
+  "early-w8-1": [1, 3],   // St. Ethelreda A 1–3 St. Ethelreda B
+  "early-w8-2": [0, 3],   // St. Benedict B 0–3 St. Ailbe A
+  "early-w8-4": [0, 3],   // St. Benedict B 0–3 St. Ethelreda A
+
   // Middle (5th–8th)
   "middle-w1-1": [3, 0],  // Benedict 3–0 Ailbe (Sep 12)
   "middle-w4-1": [8, 3],  // Thomas 8–3 Ethelreda (Oct 3)
