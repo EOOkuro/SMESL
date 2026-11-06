@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { fedosReady, registerWithFedos, FEDOS_APP } from "../lib/fedos.js";
 
 const FORM_ENDPOINT = "https://formspree.io/f/mjygwpdr";
 
@@ -387,17 +388,29 @@ function RegistrationForm({ planId, setPlanId, formRef }) {
     });
 
     try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error("Form failed");
+      if (fedosReady) {
+        // Goes to SMESL's own registration list in FedOS (slug: smesl).
+        await registerWithFedos("smesl", {
+          plan: `${plan.label} — ${plan.price}`,
+          guardian: { name: parent.name, email: parent.email, phone: parent.phone, relationship: "parent/guardian",
+            emergency_name: parent.emergencyName, emergency_phone: parent.emergencyPhone },
+          players: children.map((c) => ({ name: c.name, dob: c.birthdate, grade: c.grade, school: c.school, team: c.team, jersey_size: c.jerseySize })),
+          website: "",
+        });
+      } else {
+        // FedOS not connected yet (no VITE_FEDOS_URL): keep the old inbox so no sign-up is lost.
+        const res = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error("Form failed");
+      }
       // Registration saved — now send them to pay, with their email prefilled so it matches.
       window.location.href = `${plan.url}?prefilled_email=${encodeURIComponent(parent.email)}`;
     } catch (err) {
       setStatus("error");
-      setErrorMsg("We couldn't save your registration. Check your connection and try again. Nothing was charged.");
+      setErrorMsg((fedosReady && err?.message) || "We couldn't save your registration. Check your connection and try again. Nothing was charged.");
     }
   };
 
@@ -486,6 +499,9 @@ function RegistrationForm({ planId, setPlanId, formRef }) {
           <div style={s.note}>
             Step 1 of 2. After you continue, you'll be sent to Stripe to pay. Your registration isn't complete until payment goes through.
           </div>
+          {fedosReady && <div style={s.note}>
+            Need to change a phone number, jersey size or emergency contact later? <a href={`${FEDOS_APP}/signup`}>Create your free account</a> with the same email you register with.
+          </div>}
         </div>
       </form>
     </div>
